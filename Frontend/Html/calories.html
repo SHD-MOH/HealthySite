@@ -10,71 +10,72 @@
     <header>
         <div id="logo-section"><img src="/media/logo.png" height="73" weidth="73" class="logo-pic"><p>HealthySite</p></div>
         <hr>
+    
         <img src="/media/logo.png" height="24" width="24" id="small-logo">
     </header>
     <main>
         <div id="input-section">
             <label for="height" class="p2">height :
-            <input type="number" id="height" placeholder="160 cm" ></label>
+            <input type="number" id="height" placeholder="160 kg" ></label>
 
             <label for="weight" class="p2">weight :
-            <input type="number" id="weight" placeholder="60 kg" ></label>
-            <button class="primary-button"  >calculate</button>
+            <input type="number" id="weigth" placeholder="60 kg" ></label>
+
+            <label for="age" class="p2">age :
+            <input type="number" id="age" placeholder="20 yr" ></label>
+
+            <label for="sex">Sex:
+                <select id="sex">
+                    <option>Woman</option>
+                    <option>Man</option>
+                </select>
+            </label>
+            <label for="active-level">active level:
+                <select id="active-level">
+                    <option>not active</option>
+                    <option>lightly active</option>
+                    <option>mooderately active</option>
+                    <option>very active</option>
+                    <option>extra active</option>
+                </select>
+            </label>
+
+            
+            <button class="primary-button" id="calculate">calculate</button>
         </div>
-        
         <div id="output-section">
-            <div class="h1">22.6</div>
-        </div>
-        <div id="bmi-section">
-            <div>
-                <div class="card">
-                    <p class="p1">16.5 or less</p>
-                    <img src="/media/logo.png" height="120" width="120" class="logo-pic">
-                    <h3 class="h3">really under weight</h3>
-                </div>
+            <div class="card">
+                <p class="p1-2">your current weight</p>
+                <p class="h2" id="weightOut">60<span class="h3">kg</span></p>
+
+                <hr class="hr2">
             </div>
-            <div>
-               <div class="card">
-                    <p class="p1">16.5 - 18.5</p>
-                    <img src="/media/logo.png" height="150" width="150" class="logo-pic">
-                    <h3 class="h3">under weight</h3>
-                </div> 
+            <div class="card">
+                <p class="p1-2">your current calorie intake</p>
+                <p class="h2" id="calorieOut">1600<span class="h3">cal/day</span></p>
+                <hr class="hr2">
             </div>
-            <div>
-                <div class="card">
-                    <p class="p1">18.5 - 25</p>
-                    <img src="/media/logo.png" height="180" width="180" class="logo-pic">
-                    <h3 class="h3">normal weight</h3>
-                </div>
+            <div class="card">
+                <p class="p1-2">your ideal weight</p>
+                <p class="h2" id="idealOut">56<span class="h3">kg</span></p>
+                <hr class="hr2">
             </div>
-            <div>
-                <div class="card">
-                    <p class="p1">25 - 30</p>
-                    <img src="/media/logo.png" height="210" width="210" class="logo-pic">
-                    <h3 class="h3">over weight</h3>
-                </div>
+            <div class="card">
+                <p class="p1-2">to lose weight</p>
+                <p class="h2" id="recommendedOut">500<span class="h3">cal/day</span></p>
+                <hr class="hr2">
             </div>
-            <div>
-                <div class="card">
-                    <p class="p1">30 - 35</p>
-                    <img src="/media/logo.png" height="240" width="240" class="logo-pic">
-                    <h3 class="h3">obesty I</h3>
-                </div>
-            </div>
-            <div>
-                <div class="card">
-                    <p class="p1">36 or more</p>
-                    <img src="/media/logo.png" height="260" width="260" class="logo-pic">
-                    <h3 class="h3">obesty II</h3>
-                </div>
-            </div>
+
         </div>
         <div id="reminder-section">
-            <p class="p1-2">These calculations don’t factor in muscle mass or body fat distribution, so BMI may not be an accurate measure for athletes ,older adults and peapole with unnormal bloood sugar .</p>
+            <p class="p1">just remember to reduce sugar and carbs and eat more protine to reach your goal faster and heilthier and to exersie for at least 15 minutes a day </p>
+            
+
         </div>
     </main>
     <footer>
         <p class="p3">© SHDMOH | HealthySite All Rights Reserved</p>
     </footer>
+    <script src="/Frontend/Javascript/calorie.js" defer></script>
 </body>
 </html>

@@ -30,7 +30,14 @@ hr{
     margin-left:200px;
     margin-top:8px;
     filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.25));
+    animation: upDown 2s infinite ease-in-out;
 }
+@keyframes upDown{
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
 main{
     display:grid;
     grid-template-columns:1fr;
@@ -58,8 +65,8 @@ input{
     padding: 8px 16px 8px 16px;
     margin-left:10px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
-    color:#1E1E1E;
-    text-align: center;
+    color:#fff;
+    text-align:center;
     font-family:'Libre Baskerville';
     font-size:16px;
 
@@ -123,13 +130,87 @@ button{
     column-gap:16px;
     margin-left: 36px;
     margin-right: 36px;
+    
 }
 .card{
     display:flex;
     flex-direction: column;
     align-items: center;
     row-gap: 14px;
+    position: relative; 
+    z-index: 2;
 }
+
+#heightlight-none{
+
+}
+#highlight-really-under-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:27%;
+    width: 12%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(0, 24px);  
+}
+#highlight-under-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:27%;
+    width: 12%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(245px, 16px);  
+}
+#highlight-normal-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:30%;
+    width: 12%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(495px, 12px);   
+}
+#highlight-over-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:35%;
+    width: 12%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(780px, 16px);   
+}
+#highlight-obesty1-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:36%;
+    width: 12%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(1090px, 16px);  
+}
+#highlight-obesty2-weight{
+    background-color:rgba(216, 125, 98, 0.3);
+    display: block;
+    position: absolute;
+    z-index:1;
+    height:38%;
+    width: 14%;
+    border-radius:15px;
+    margin-left:-18px;
+    transform: translate(1410px, 16px);  
+}
+
 #reminder-section{
     grid-area:reminder-section;
     text-align: center;
