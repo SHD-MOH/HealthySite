@@ -8,29 +8,30 @@ calculate.addEventListener("click",()=>{
     let weight = parseFloat(document.getElementById('weight').value);
 
     let bmi = bmicalc(height,weight);
-
     let bmiout = document.getElementById('bmiout');
     bmiout.innerText=bmi.toFixed(1);
 
-    let haighlight = document.getElementById('heightlight-none');
+    document.querySelectorAll('.highlight').forEach(highlight => {
+        highlight.style.opacity = '0';
+    });
 
-
-
-    if(bmi<=16.5){
-        haighlight.id='highlight-really-under-weight';
-    }else if(bmi>16.5 && bmi<=18.5){
-        haighlight.id='highlight-under-weight';
-    }else if(bmi>18.5 && bmi<=25){
-        haighlight.id='highlight-normal-weight';
-    }else if(bmi>25 && bmi<=30){
-        haighlight.id='highlight-over-weight';
-    }else if(bmi>30 && bmi<=35){
-        haighlight.id='highlight-obesty1-weight';
-    }else{
-        haighlight.id='highlight-obesty2-weight';
+    let highlightid;
+    if (bmi <= 16.5) {
+        highlightId = '#really-under-weight';
+    } else if (bmi > 16.5 && bmi <= 18.5) {
+       highlightId = '#under-weight';
+    } else if (bmi > 18.5 && bmi <= 25) {
+        highlightId =   '#normal-weight';
+    } else if (bmi > 25 && bmi <= 30) {
+        highlightId =   '#over-weight';
+    } else if (bmi > 30 && bmi <= 35) {
+        highlightId = '#obesty-I';
+    } else {
+        highlightId =  '#obesty-II';
     }
     
-    
+    document.querySelector(`${highlightId} .highlight`).style.opacity = '1';
+
 })
 
 

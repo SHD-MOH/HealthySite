@@ -57,6 +57,12 @@ main{
     column-gap:80px;
     align-items: center;
 }
+label {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  white-space: nowrap; 
+  }
 
 input{
     border:none;
@@ -121,95 +127,48 @@ button{
 #output-section{
     grid-area: output-section;
     text-align:center;
+    margin:0;
+    padding: 0;
 }
 #bmi-section{
     grid-area: bmi-section;
     display:flex;
+    flex-wrap: wrap;
     align-items:end;
-    justify-content: space-between;
-    column-gap:16px;
-    margin-left: 36px;
-    margin-right: 36px;
+    justify-content: center;
+    gap:20px;
+    padding: 20px;
+    position: relative;
     
+}
+.card-container {
+    position: relative;
 }
 .card{
     display:flex;
     flex-direction: column;
     align-items: center;
     row-gap: 14px;
+    border-radius: 15px;;
     position: relative; 
     z-index: 2;
 }
 
-#heightlight-none{
+.highlight{
+    background-color:rgba(216, 125, 98, 0.3);
+    border-radius:15px;
+    position: absolute;
+    z-index:1;
+    
+    pointer-events:none;
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
 
-}
-#highlight-really-under-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:27%;
-    width: 12%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(0, 24px);  
-}
-#highlight-under-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:27%;
-    width: 12%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(245px, 16px);  
-}
-#highlight-normal-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:30%;
-    width: 12%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(495px, 12px);   
-}
-#highlight-over-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:35%;
-    width: 12%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(780px, 16px);   
-}
-#highlight-obesty1-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:36%;
-    width: 12%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(1090px, 16px);  
-}
-#highlight-obesty2-weight{
-    background-color:rgba(216, 125, 98, 0.3);
-    display: block;
-    position: absolute;
-    z-index:1;
-    height:38%;
-    width: 14%;
-    border-radius:15px;
-    margin-left:-18px;
-    transform: translate(1410px, 16px);  
-}
 
 #reminder-section{
     grid-area:reminder-section;
@@ -257,5 +216,249 @@ footer{
     
     font-size:12px;
     color:#7A7A7A
+}
+
+
+
+
+
+@media(max-width:1360px){
+
+    main{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    "input-section"
+    "output-section"
+    "bmi-section"
+    "reminder-section"; 
+    }
+
+    #bmi-section{
+    grid-area: bmi-section;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: -200px;
+    }
+
+    .card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    position: relative; 
+    z-index: 2;
+    text-align: center;
+    }
+
+    #reminder-section{
+    grid-area:reminder-section;
+    text-align: center;
+    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    }
+
+    #input-section{
+    grid-area: input-section;
+    display:flex;
+    margin-left: 16px;
+    column-gap:12px;
+    justify-content: center;
+    }
+
+    .primary-button{
+    border:3px solid #F3D3BD;
+    border-radius:10px;
+    background-color:rgba(216, 125, 98, 0.65);
+    color:#1E1E1E;
+    font-size: 16px;
+    padding: 4px 16px 4px 16px;
+    min-width:220px;
+    min-height:36px;
+    box-shadow:none;
+    transition-property:box-shadow 600ms ease-in-out 200ms ;
+    float: right;
+    margin-right: 40px;
+    } 
+    footer{
+    grid-area:footer;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    
+    }
+
+
+
+
+
+
+
+
+
+    
+}
+
+@media(max-width:1100px){
+
+    main{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    "input-section"
+    "output-section"
+    "bmi-section"
+    "reminder-section"; 
+    }
+
+    #bmi-section{
+    grid-area: bmi-section;
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: -270px;
+    column-gap:-600px ;
+    }
+
+    .card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    position: relative; 
+    z-index: 2;
+    text-align: center;
+    margin: 0px;
+    }
+
+    #reminder-section{
+    grid-area:reminder-section;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    }
+
+    #input-section{
+    grid-area: input-section;
+    display:flex;
+    margin-left: 16px;
+    column-gap:12px;
+    justify-content: center;
+    }
+
+    .primary-button{
+    border:3px solid #F3D3BD;
+    border-radius:10px;
+    background-color:rgba(216, 125, 98, 0.65);
+    color:#1E1E1E;
+    font-size: 16px;
+    padding: 4px 16px 4px 16px;
+    min-width:220px;
+    min-height:36px;
+    box-shadow:none;
+    transition-property:box-shadow 600ms ease-in-out 200ms ;
+    float: right;
+    margin-right: 40px;
+    margin-left: 0px;
+    } 
+    footer{
+    grid-area:footer;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    
+}
+}
+
+@media(max-width:810px){
+
+    main{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 2fr 1fr;
+    grid-template-areas: 
+    "input-section"
+    "output-section"
+    "bmi-section"
+    "reminder-section"; 
+    }
+
+    #output-section{
+    grid-area: output-section;
+    text-align:center;
+    margin-top:-350px;
+    padding: 0;
+    }
+    
+    
+    #bmi-section{
+    grid-area: bmi-section;
+    display:grid;
+    grid-template-columns:  1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: -860px;
+    column-gap:-600px ;
+    }
+
+    .card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    position: relative; 
+    z-index: 2;
+    text-align: center;
+    margin: 0px;
+    }
+
+    #reminder-section{
+    grid-area:reminder-section;
+    text-align: center;
+    margin-left: 40px;
+    margin-right:40px;
+    margin-top: 40px;
+    
+    display: flex;
+    justify-content: center;
+    }
+
+    #input-section{
+    grid-area: input-section;
+    display:flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-left: 16px;
+    justify-content: center;
+    margin-top: -320px;
+    }
+
+    .primary-button{
+    border:3px solid #F3D3BD;
+    border-radius:10px;
+    background-color:rgba(216, 125, 98, 0.65);
+    color:#1E1E1E;
+    font-size: 16px;
+    padding: 4px 16px 4px 16px;
+    min-width:220px;
+    min-height:36px;
+    box-shadow:none;
+    transition-property:box-shadow 600ms ease-in-out 200ms ;
+    float: right;
+    margin-right: 40px;
+    margin-left: 0px;
+    } 
+    footer{
+    grid-area:footer;
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    
+}
 }
 
