@@ -1,6 +1,6 @@
 HealthySite - Calorie & BMI Calculator
 
-This is a simple and responsive web pages that helps users calculate their calorie needs and more info about it, and Body Mass Index (BMI) using only vanilla HTML, CSS, and JavaScript —no frameworks or libraries involved.
+This is a simple and responsive web pages that helps users calculate their calorie needs, Body Mass Index (BMI) using only vanilla HTML, CSS, and JavaScript —no frameworks or libraries involved.
 
 Features
 
