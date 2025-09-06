@@ -24,4 +24,7 @@ Technologies Used
   - JavaScript (Vanilla) – Logic for calculations and interactivity
 
 Screenshots
+![landing page](media/home.jpeg)
+![bmi page](media/bmi.jpeg)
+![calories page](media/calorie.jpeg)
 
